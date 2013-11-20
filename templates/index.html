@@ -1,106 +1,29 @@
 <html>
-<head>
-<style>
-    li {
-        list-style-type:none;
-    }
-    .play {
-        background-image:url('/static/images/play-2x.png');
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size: 16px 18px;
-        width: 16px;
-        height: 18px;
-        display: relative;
-        float: left;
-        padding: 5px;
-    }
-    .play:hover .play:active {
-        background-position:center top;
-    }
-
-    .pause {
-        background-image:url('/static/images/pause-2x.png');
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size: 15px 18px;
-        width: 15px;
-        height: 18px;
-        display: block;
-        float: left;
-        padding: 5px;
-    }
-    .pause:hover .pause:active {
-        background-position:center top;
-    }
-
-    .volume-up {
-        background-image:url('/static/images/volume-full-2x.png');
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size: 16px 14px;
-        width: 16px;
-        height: 14px;
-        display: block;
-        float: left;
-        padding: 5px;
-    }
-    .volume-up:hover .volume-up:active {
-        background-position:center top;
-    }
-
-    .volume-down {
-        background-image:url('/static/images/volume-off-2x.png');
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size: 16px 14px;
-        width: 16px;
-        height: 14px;
-        display: block;
-        float: left;
-        padding: 5px;
-    }
-    .volume-down:hover .volume-down:active {
-        background-position:center top;
-    }
-
-    .fullscreen {
-        background-image:url('/static/images/fullscreen-2x.png');
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size: 15px 15px;
-        width: 15px;
-        height: 15px;
-        display: block;
-        float: left;
-        padding: 5px;
-    }
-    .fullscreen:hover .fullscreen:active {
-        background-position:center top;
-    }
-
-</style>
-</head>
-<body>
-<ul>
-    <li><a class="play" href="/play/"></a></li>
-    <li><a class="pause" href="/pause/"></a></li>
-    <li><a class="volume-down" href="/volume/down/"></a></li>
-    <li><a class="volume-up" href="/volume/up/"></a></li>
-    <li><a class="fullscreen" href="/fullscreen/"></a></li>
-{#
-    <li><a class="arrowleft" href="/seek/backward/"></a></li>
-    <li><a class="arrowright" href="/seek/foreward/"></a></li>
-#}
-</ul>
-<br>
-<br>
-<hr />
-<ul>
-{% for file in file_list %}
-<li>{{ file }}</li>
-{% endfor %}
-</ul>
-<a class="attribution" href="http://www.glyphicons.com">Icons by GLYPHICONS</a>
-</body>
+  <head>
+    <link rel="stylesheet" href="/static/css/app.css">
+  </head>
+  <body>
+    <div class="control-panel">
+      <ul>
+        <li><a class="icon play" href="/play/"></a></li>
+        <li><a class="icon pause" href="/pause/"></a></li>
+        <li><a class="icon volume-down" href="/volume/down/"></a></li>
+        <li><a class="icon volume-up" href="/volume/up/"></a></li>
+        <li><a class="icon fullscreen" href="/fullscreen/"></a></li>
+    {#
+        <li><a class="icon arrowleft" href="/seek/backward/"></a></li>
+        <li><a class="icon arrowright" href="/seek/foreward/"></a></li>
+    #}
+      </ul>
+    </div>
+    <br>
+    <br>
+    <hr />
+    <ul>
+    {% for file in file_list %}
+      <li>{{ file }}</li>
+    {% endfor %}
+    </ul>
+    <a class="attribution" href="http://www.glyphicons.com">Icons by GLYPHICONS</a>
+  </body>
 </html>

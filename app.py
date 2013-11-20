@@ -34,7 +34,7 @@ def backward():
     return redirect(url_for('index'))
 
 @app.route('/seek/foreward/')
-def backward():
+def forward():
     totem('--seek-fwd')
     return redirect(url_for('index'))
 
