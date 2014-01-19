@@ -4,11 +4,21 @@
     background-position:center center;
     background-repeat:no-repeat;
     padding: 5px;
+    margin: 5px;
     display: block;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .control-panel {
+    width: 100%;
+    height: 25%;
+    display: block;
+    border-bottom: 1px solid black;
+}
+.control-panel ul {
     margin: 0 auto;
+    width: 330px;
 }
 .control-panel li {
     list-style-type:none;
@@ -35,4 +45,18 @@
     background-image:url('/static/images/glyphicons_215_resize_full.png');
 }
 
+.forward {
+    background-image:url('/static/images/glyphicons_176_forward.png');
+}
 
+.rewind {
+    background-image:url('/static/images/glyphicons_172_rewind.png');
+}
+
+.flashes {
+    list-style-type: none;
+    color: white;
+    background: maroon;
+    border: 1px solid maroon;
+    text-align: center;
+}

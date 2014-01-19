@@ -3,22 +3,26 @@
     <link rel="stylesheet" href="/static/css/app.css">
   </head>
   <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flashes">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     <div class="control-panel">
       <ul>
-        <li><a class="icon play" href="/play/"></a></li>
+        <li><a class="icon rewind" href="/seek/backward/"></a></li>
         <li><a class="icon pause" href="/pause/"></a></li>
+        <li><a class="icon play" href="/play/"></a></li>
+        <li><a class="icon forward" href="/seek/foreward/"></a></li>
         <li><a class="icon volume-down" href="/volume/down/"></a></li>
         <li><a class="icon volume-up" href="/volume/up/"></a></li>
         <li><a class="icon fullscreen" href="/fullscreen/"></a></li>
-    {#
-        <li><a class="icon arrowleft" href="/seek/backward/"></a></li>
-        <li><a class="icon arrowright" href="/seek/foreward/"></a></li>
-    #}
       </ul>
     </div>
-    <br>
-    <br>
-    <hr />
     <ul>
     {% for file in file_list %}
       <li>{{ file }}</li>
