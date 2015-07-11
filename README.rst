@@ -1,5 +1,6 @@
 Remote Control
 ==============
 
-A remote control web interface for an Ubuntu media server.
+Depricated.
 
+Using [kodi](http://kodi.tv/) instead. 
